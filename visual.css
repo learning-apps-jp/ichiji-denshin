@@ -1,0 +1,90 @@
+/* 和紙・朱印・組子をモチーフにした、外部素材不要の装丁。 */
+.genre-picker{border:0;padding:0;margin:24px 0 10px;min-width:0}.genre-picker legend{font-family:"Yu Mincho",serif;font-size:18px;letter-spacing:.07em;font-weight:bold}.genre-guide{font-size:11px;color:#747861;margin:6px 0 13px}.genre-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.genre-option{position:relative;cursor:pointer;margin:0;min-width:0}.genre-option>input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;padding:0}.genre-card{position:relative;display:flex;align-items:center;gap:9px;border:1px solid #d9ccb3;border-radius:7px;min-height:81px;padding:11px 10px 20px;background:#fffdf5;transition:background .15s,border-color .15s,box-shadow .15s}.genre-icon{font-size:25px;line-height:1;flex-shrink:0}.genre-copy{min-width:0}.genre-copy strong{display:block;font-size:13px;line-height:1.5;color:var(--ink)}.genre-copy small{display:block;font-size:9px;color:#6d735f;line-height:1.7;white-space:normal}.genre-count{position:absolute;right:9px;bottom:4px;font-size:9px;color:#817963}.genre-check{position:absolute;right:5px;top:3px;font-size:11px;color:var(--green);opacity:0}.genre-option input:checked+.genre-card{border-color:var(--green);background:#eaf0df;box-shadow:inset 0 0 0 1px var(--green)}.genre-option input:checked+.genre-card .genre-check{opacity:1}.genre-option:hover .genre-card{border-color:#7a9169}.genre-option input:focus-visible+.genre-card{outline:3px solid #4e8875;outline-offset:3px}.genre-note{font-size:11px;line-height:1.8;color:#53674e;margin:12px 0 0;min-height:40px}.hint[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}@media(max-width:380px){.genre-card{gap:6px;padding:12px 7px 20px}.genre-icon{font-size:21px}.genre-copy strong{font-size:11px}.genre-copy small{font-size:8px}}
+:root{--paper:#f4efdf;--ink:#253a35;--red:#b53d2b;--line:#d9ceba;--green:#365d50;--gold:#a27b36}
+body{background-color:var(--paper);background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%237b694b' opacity='.1' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");position:relative}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;border:10px solid #e5dcc880;border-bottom:0;z-index:5}
+header{max-width:1200px;padding:26px 40px;border-bottom:1px solid #bbaa8970;position:relative}
+header:after{content:"";position:absolute;height:4px;width:36px;background:var(--red);bottom:-2px;left:40px}
+header a{display:flex;align-items:center;gap:15px;font-family:"Yu Mincho","MS PMincho",serif;font-size:29px;letter-spacing:.17em}
+header a:before{content:"一\A字";white-space:pre;text-align:center;font-size:17px;line-height:1.25;letter-spacing:0;border:1px solid #e5b2a1;outline:2px solid var(--red);outline-offset:2px;background:var(--red);color:#fff6e5;padding:3px 5px;transform:rotate(-4deg)}
+header a span{font-size:9px;max-width:80px;line-height:1.8;color:#7b806d}
+.badge{border:1px solid #83937b66;background:#e7e9d888;border-radius:30px;padding:8px 15px;font-size:11px}
+main{max-width:1120px;padding:46px 36px 60px;position:relative}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em}
+.hero{gap:65px;align-items:start}
+.hero>section:first-child{position:relative;padding:20px 0 0;isolation:isolate}
+.hero>section:first-child:before{content:"";position:absolute;z-index:-1;width:330px;height:330px;top:78px;left:65px;border-radius:50%;background:radial-gradient(circle at 35% 40%,#c76e4e10,#b66a4220 62%,#b66a4200 63%);border:1px solid #bd9b6f22;box-shadow:0 0 0 13px #c5a57308,0 0 0 14px #c5a57320}
+.hero>section:first-child:after{content:"以 心\A伝 心";white-space:pre;position:absolute;right:7px;top:35px;font-family:"Yu Mincho",serif;font-size:15px;line-height:1.7;font-weight:bold;letter-spacing:.12em;color:var(--red);border:2px solid #b53d2b99;padding:7px;transform:rotate(7deg);opacity:.7}
+.hero h1{font-size:clamp(48px,6vw,76px);line-height:1.45;letter-spacing:.08em;font-weight:600;margin:20px 0 25px;text-shadow:1px 2px #fff8}
+.hero>section>p:not(.muted){font-size:15px;line-height:2.2;letter-spacing:.05em}
+.stamp{position:relative;gap:11px;padding:13px 0 27px;margin:24px 0 8px;perspective:700px}
+.stamp:before{content:"";position:absolute;left:-10px;right:-5px;bottom:5px;height:47px;border-radius:50%;background:#504b3020;filter:blur(13px);z-index:-1;transform:scaleY(.5)}
+.tile{position:relative;overflow:hidden;background:linear-gradient(110deg,#fffdf2,#eee4cc);border:1px solid #cfc0a2;border-radius:5px;box-shadow:0 4px 0 #cbbd9f,0 6px 0 #b7a98d,3px 13px 18px #5b482f20,inset 0 0 0 5px #fff8,inset 0 0 0 6px #c7b68f66;font-family:"Yu Mincho","MS PMincho",serif;font-weight:600;color:#283e34;text-shadow:1px 1px 0 #fff8;transform:rotate(2deg)}
+.tile:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(97deg,transparent 0 7px,#8c755706 8px 9px)}
+.tile.red{background:linear-gradient(125deg,#c95b40,#a93425);border-color:#9e3828;color:#fff4df;box-shadow:0 4px 0 #8d3528,0 6px 0 #71372a,3px 13px 20px #7e302b25,inset 0 0 0 5px #d06c4c,inset 0 0 0 6px #edb29270;text-shadow:1px 2px #782c2580;transform:rotate(-7deg)}
+.stamp .tile:nth-child(3){transform:translateY(8px) rotate(-3deg)}
+.stamp .tile:nth-child(4){transform:translateY(-3px) rotate(5deg)}
+.hero .muted{letter-spacing:.09em;font-size:12px}
+.card{background:linear-gradient(140deg,#fffdf6ee,#fffbf0dd);border:1px solid #d5c6ad;border-radius:12px;box-shadow:0 2px 0 #fff9 inset,0 8px 25px #61503a09,0 25px 60px #58472c05;padding:30px;position:relative}
+.hero>.card{border-top:4px solid var(--green);margin-top:7px;padding-top:24px}
+.hero>.card:before{content:"参加のしおり";font-family:"Yu Mincho",serif;font-size:11px;letter-spacing:.16em;color:#7d856e;display:block;margin-bottom:6px}
+.card h2{font-size:27px;letter-spacing:.06em;margin-bottom:23px}
+.players{gap:14px 12px}
+.players label{color:#66715f;font-size:11px;letter-spacing:.09em}
+input,select{border-color:#ddd1b9;background:#fffdf5;box-shadow:inset 0 2px 4px #63523405;border-radius:5px;letter-spacing:.02em}
+input{min-width:0}
+.name-row button{background:#f0eadc;border:0;min-width:30px;padding:6px;color:#83745b}
+button{border-radius:6px;transition:background .18s ease,box-shadow .18s ease,transform .18s ease;border-color:#d4c5a8;background:#fffdf5;box-shadow:0 2px 0 #ded1b8;font-size:14px;letter-spacing:.03em}
+button:hover:not(:disabled){background:#eee8d8;border-color:#8a9b7b;transform:translateY(-1px);box-shadow:0 4px 8px #52452f12}
+button:active:not(:disabled){transform:translateY(1px);box-shadow:none}
+button.primary{background:linear-gradient(135deg,#c65237,#ad3828);border:1px solid #a53e2a;box-shadow:0 3px 0 #843326,0 7px 15px #b13b2420;color:#fff7e7;min-height:52px}
+button.primary:hover:not(:disabled){background:linear-gradient(135deg,#b9472e,#952c21);box-shadow:0 3px 0 #783022,0 9px 20px #b13b242b}
+.form-section button{font-size:12px;border-style:dashed;box-shadow:none;background:transparent}
+.hero .error:empty{min-height:10px;margin:0}
+.hero .card>.muted{font-size:11px;margin:12px 0 18px}
+.experience{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;border-top:1px solid #c6b59588;border-bottom:1px solid #c6b59588;margin:42px 0 24px;padding:25px 5px}
+.experience article{display:flex;align-items:center;gap:17px}
+.experience b{font-family:serif;font-size:26px;color:var(--red);font-weight:400;border-right:1px solid #c9b99b;padding-right:17px}
+.experience strong{display:block;font-family:"Yu Mincho",serif;font-size:16px;letter-spacing:.06em}
+.experience span{display:block;color:#78806e;font-size:11px;line-height:1.7;margin-top:5px}
+details{background:#fffcf455;border:1px solid #d9ceb8;border-radius:7px;padding:19px 23px;font-size:13px}
+summary{font-family:"Yu Mincho",serif;font-size:16px;letter-spacing:.07em}
+.progress{height:3px;margin-top:17px;margin-bottom:36px;background:#d9ceba;border-radius:5px}
+.progress span{background:linear-gradient(90deg,var(--red),#d28f55);border-radius:5px}
+.pass{padding:35px 38px 40px;background:#fffdf2b3;border:1px solid #d5c6ab;box-shadow:0 12px 40px #554a300a;position:relative;border-radius:7px;max-width:570px;margin-top:35px}
+.pass:before{content:"一字伝心";display:block;margin-bottom:25px;color:#9c7650;font-family:"Yu Mincho",serif;letter-spacing:.4em;font-size:12px}
+.pass:after{content:"";position:absolute;inset:8px;border:1px solid #d8cbb780;border-radius:3px;pointer-events:none}
+.pass h2{font-size:31px;line-height:1.65}
+.person{margin:20px 0;font-size:42px;overflow-wrap:anywhere}
+.secret{border:1px solid #bd7760;border-top:4px solid var(--red);background:radial-gradient(ellipse at top,#f6e5d6,#fffcf1 80%)}
+.secret:before{content:"秘";position:absolute;left:20px;top:20px;color:#b53d2b99;border:1px solid #b53d2b88;padding:2px 5px;font-family:serif;font-size:17px;transform:rotate(-8deg)}
+.hint-inputs input{background:linear-gradient(100deg,#fffdf4,#f4ecd9);border-radius:4px;box-shadow:0 3px 0 #d5c7ab;font-family:"Yu Mincho",serif;color:var(--green)}
+.hint-inputs input:disabled{opacity:.5}
+.hint-board{padding:20px 10px 28px;position:relative;isolation:isolate;min-height:220px;gap:19px}
+.hint-board:before{content:"";position:absolute;z-index:-1;width:min(520px,95%);height:150px;border-radius:50%;background:radial-gradient(ellipse,#d4c1a244,transparent 70%);bottom:-10px}
+.hint-board .tile{transform:rotate(-2deg)}
+.hint-board .tile:nth-child(even){transform:rotate(3deg) translateY(5px)}
+.hint-board .tile.red{transform:rotate(-5deg)}
+.points{gap:0;max-width:440px;margin:8px auto 30px;border:1px solid #c9b898;border-radius:8px;background:#fffcf080;padding:16px 20px;box-shadow:inset 0 0 0 4px #fffcf080}
+.points>div{flex:1}.points>div+div{border-left:1px solid #d2c3a7}.points span{font-size:11px;color:#71765f;letter-spacing:.06em}.points strong{font-family:Georgia,serif;font-weight:400;font-size:38px}
+main[data-view="play"]>.card{margin-top:28px;border-top:3px solid var(--green)}
+.card h3{font-family:"Yu Mincho",serif;font-size:19px;letter-spacing:.06em}
+.winners button{min-height:56px;border-left:3px solid #72856a;overflow-wrap:anywhere}
+.winners button:before{content:"●";font-size:8px;color:#8d9d7c;margin-right:9px}
+.winners button.selected:before{color:#e4d5aa}
+.score-row{padding:20px 10px;border-bottom:1px solid #d7cbb4;overflow-wrap:anywhere}
+.score-row strong{font-family:Georgia,serif;font-size:30px;font-weight:400;flex-shrink:0}
+.score-row small{font-family:"Yu Gothic UI","Meiryo",sans-serif;font-size:11px}
+.score-row.top{background:linear-gradient(110deg,#eee1bc,#f7efd9);border:1px solid #c6aa6c;box-shadow:inset 0 0 0 4px #fff5;position:relative}
+.score-row.top:before{content:"誉";font-family:serif;color:#9c762e;border:1px solid #b49351;font-size:20px;padding:7px;transform:rotate(-5deg);flex-shrink:0}
+.score-row.top>div{flex:1}
+main[data-view="final"]>.center{padding:30px 0 20px;background:radial-gradient(ellipse,#d0b66c20,transparent 65%)}
+main[data-view="final"] h1{color:var(--red);font-size:clamp(34px,6vw,62px)}
+footer{border-top:1px solid #cdbf9f77;max-width:1120px;margin:auto;letter-spacing:.13em;color:#89846e;padding:25px}
+@media(min-width:900px){main[data-view="play"]{max-width:1060px}.hero .stamp .tile{width:88px;height:116px}.hero>.card{padding:27px 30px 30px}.hero>section:first-child{position:sticky;top:30px}}
+@media(max-width:800px){.hero{gap:32px}.hero>section:first-child:after{right:-5px;font-size:12px}.experience{gap:15px}.experience article{gap:10px}.experience b{padding-right:10px}.experience strong{font-size:14px}}
+@media(max-width:650px){body:before{border-width:5px}header{padding:20px 22px}header:after{left:23px}header a{font-size:23px;gap:11px}header a span{font-size:8px;max-width:60px}.badge{font-size:9px;padding:7px 9px;letter-spacing:0}main{padding:28px 22px 40px}.hero{gap:27px}.hero h1{font-size:52px;margin-top:19px}.hero>section:first-child{padding-top:4px}.hero>section:first-child:before{width:270px;height:270px;left:30px;top:65px}.hero>section:first-child:after{right:7px;top:23px;font-size:13px}.hero>section>p:not(.muted){font-size:13px;line-height:2}.stamp{gap:11px;margin-top:21px;padding-bottom:17px}.stamp .tile{width:68px;height:91px;font-size:46px}.hero .muted{font-size:10px}.hero>.card{margin-top:0;padding:23px}.card{padding:22px}.card h2{font-size:25px}.players{gap:12px 10px}.player-name{padding:10px 8px;font-size:13px}.name-row{gap:3px}.name-row button{padding:6px;min-width:25px}.experience{grid-template-columns:1fr;margin-top:20px;gap:18px;padding:22px 8px}.experience article{gap:17px}.experience b{width:34px;padding-right:15px;font-size:23px}.experience strong{font-size:15px}.experience span{font-size:11px}details{padding:18px}.pass{padding:29px 23px;margin:23px auto}.pass h2{font-size:27px}.person{font-size:36px}.secret:before{left:12px;top:14px}.answer{font-size:32px;overflow-wrap:anywhere}.hint-board{gap:11px;min-height:170px;padding:20px 0 25px}.hint-board .tile{width:clamp(49px,14vw,76px);height:95px;font-size:50px}.points{padding:12px 10px;max-width:320px}.points strong{font-size:32px}.points span{font-size:10px}.hint-inputs{gap:7px}.hint-inputs input{height:65px;font-size:27px}.winners{grid-template-columns:repeat(2,minmax(0,1fr))}.score-row{gap:10px}.score-row.top:before{font-size:16px;padding:4px}.score-row strong{font-size:26px}.score-row>div{font-size:14px}.progress{margin-bottom:27px}footer{font-size:10px;padding:22px}}
+@media(prefers-reduced-motion:no-preference){.hint-board .tile{animation:card-reveal .4s cubic-bezier(.2,.8,.3,1) backwards}.hint-board .tile:nth-child(2){animation-delay:.04s}.hint-board .tile:nth-child(3){animation-delay:.08s}.hint-board .tile:nth-child(4){animation-delay:.12s}.hint-board .tile:nth-child(5){animation-delay:.16s}@keyframes card-reveal{from{opacity:0;translate:0 14px;scale:.94}to{opacity:1;translate:0 0;scale:1}}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+
+@media(max-width:380px){header a span{display:none}header a{font-size:21px}.hero h1{font-size:44px}.hero>section:first-child:before{width:220px;height:220px;left:10px}.stamp .tile{width:calc((100% - 33px)/4);height:78px;font-size:40px}.hero>.card{padding:18px}.genre-grid{gap:7px}.genre-copy small{overflow-wrap:anywhere}}
